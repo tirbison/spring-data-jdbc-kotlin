@@ -17,17 +17,3 @@ class DemoApplication
 fun main(args: Array<String>) {
     runApplication<DemoApplication>(*args)
 }
-
-
-@Component
-class ExperimentLoader(val gameRepository: GameRepository) : CommandLineRunner {
-    override fun run(vararg args: String?) {
-        val game = Game("game 1", listOf(
-                Rule("rule 1", listOf(
-                        RuleValue("value 1")
-                ))))
-		val savedGame = gameRepository.save(game)
-		gameRepository.findById(savedGame.id!!)
-        println(savedGame)
-    }
-}
