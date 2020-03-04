@@ -6,7 +6,8 @@ drop table if exists experiment;
 create table game
 (
     id                      integer identity primary key,
-    name                    varchar(256)
+    name                    varchar(256),
+    game_state              varchar(256)
 );
 
 create table rule
