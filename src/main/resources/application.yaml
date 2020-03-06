@@ -1,11 +1,21 @@
+#spring:
+#  datasource:
+#    initialization-mode: always
+#    driver-class-name: org.h2.Driver
+#    username: ems
+#    password: 123456
+#    schema: classpath*:schema-h2.sql
+#    url: jdbc:h2:mem:ems
+
+
 spring:
   datasource:
+    type: com.mysql.cj.jdbc.MysqlDataSource
+    url: ${MYSQL_URL:jdbc:mysql://localhost:3306/game?createDatabaseIfNotExist=true}
+    username: ${MYSQL_USERNAME:root}
+    password: ${MYSQL_PASSWORD:}
+    schema: classpath*:schema-mysql.sql
     initialization-mode: always
-    driver-class-name: org.h2.Driver
-    username: ems
-    password: 123456
-    schema: classpath*:schema-h2.sql
-    url: jdbc:h2:mem:ems
 
 logging:
   level:

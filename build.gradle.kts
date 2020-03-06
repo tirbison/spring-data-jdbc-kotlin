@@ -30,6 +30,8 @@ dependencies {
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
+	runtimeOnly("mysql:mysql-connector-java")
+	testRuntimeOnly("mysql:mysql-connector-java")
 	implementation("com.h2database:h2")
 	implementation("org.hsqldb:hsqldb")
 	annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
