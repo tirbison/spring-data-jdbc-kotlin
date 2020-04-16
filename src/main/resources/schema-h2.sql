@@ -1,7 +1,6 @@
-drop table if exists segment_attribute_value;
-drop table if exists segment_rule;
-drop table if exists experiment_variant;
-drop table if exists experiment;
+drop table if exists rule_value;
+drop table if exists rule;
+drop table if exists game;
 
 create table game
 (
